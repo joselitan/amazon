@@ -9,8 +9,9 @@ Suite Teardown  Cleanup Testing Data
 
 
 *** Variables ***
-${BROWSER} =  chrome
-${START_URL} =  https://test.viasat.se
+${LOCALE} =     se
+${BROWSER} =    chrome
+${START_URL} =  https://test.viasat.${LOCALE}
 
 *** Test Cases ***
 User successfully logs in

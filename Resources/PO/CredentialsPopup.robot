@@ -1,6 +1,8 @@
 *** Settings ***
 Library  SeleniumLibrary
 
+*** Variables ***
+${CUSTOMER_ID}=     set variable
 *** Keywords ***
 #Actions
 Enter credentials
