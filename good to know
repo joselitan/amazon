@@ -1,0 +1,6 @@
+to use [Tags] entered in test cases when running in command line you need to enter
+C1MRH21DG944:amazon josemart$ robot -d Results -i InvalidEmail Tests
+"Tests catalog"
+
+
+robot -d Results -v BROWSER:firefox Viasat.robot  "'-v' adds variable through CMD "
