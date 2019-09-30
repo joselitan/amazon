@@ -7,6 +7,7 @@ Test Setup  Begin Web Test
 Test Teardown  End Web Close
 Suite Teardown  Cleanup Testing Data
 
+
 *** Variables ***
 ${BROWSER} =  chrome
 ${START_URL} =  https://test.viasat.se

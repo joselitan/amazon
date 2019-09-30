@@ -78,8 +78,8 @@ Log out from my pages
     LandingPage.Log Out
     LandingPage.Verify Page Loaded
 
-Go To Forget Password
-    [Documentation]  Link to forget page site
+Go To Activate Account
+    [Documentation]  Link to activate page site
     LoginPopup.Login link
     LoginPopup.Click email losenord
     CredentialsPopup.Click Activate My Pages Link

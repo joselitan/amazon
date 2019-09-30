@@ -16,7 +16,7 @@ Customer Goes To Activation Page
     [Documentation]  Navigating to activate page
     [Tags]  ActivatePage
     Viasat.Go To Viasat
-    Viasat.Go To Forget    Password
+    Viasat.Go To Activate Account
     Viasat.Verify Button Is Disabled
     Viasat.Enter Activate Account Input
     Viasat.Verify Button Is Enabled
