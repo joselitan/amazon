@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Resource  Viasat.robot
 
 *** Keywords ***
 Begin Web Test
@@ -17,3 +18,23 @@ Cleanup Testing Data
 Close cookie
     [Documentation]  This cookie notice
     Click Button  xpath:.//app-cookie-notice//button
+
+Logged In User
+    [Documentation]  required logged in user to continue testing
+    Begin Web Test
+    Viasat.Go To Viasat
+    Viasat.Login with account
+    Viasat.Verify Login Successful
+
+Log Out And Close Browser
+    [Documentation]  Requires to log out from my pages and close browser
+    Viasat.Log out from my pages
+    End Web Close
+
+
+
+#Verify Confirm Button Is Disabled
+#    Element Should Be Disabled  xpath=.//button[contains(text(),'Bekräfta')]
+
+#Verify Confirm Button Is Enabled
+#    Element Should Be Enabled  xpath=.//button[contains(text(),'Bekräfta')]

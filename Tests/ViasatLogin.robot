@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  This is some basic info about the whole suite
+Documentation  Testing successful and failed login
 Resource  ../Resources/Viasat.robot
 Resource  ../Resources/Common.robot
 Suite Setup  Insert Testing Data
@@ -14,33 +14,41 @@ ${BROWSER} =    chrome
 ${START_URL} =  https://test.viasat.${LOCALE}
 
 *** Test Cases ***
-User successfully logs in
+Valid Login Attempt
     [Documentation]  Customer logs in with valid credentials
-    [Tags]  Success Login
+    [Tags]  SuccessLogin
     Viasat.Go To Viasat
     Viasat.Login with account
     Viasat.Go To My Pages
 
-Verify Error Messages On Empty Email Field
+
+Empty Username Field
     [Documentation]  Check error messages on Empty Email Field
-    [Tags]  Empty Email
+    [Tags]  EmptyEmail
     Viasat.Go To Viasat
     Viasat.Login With Empty Email Field
     Viasat.Verify Email Requirement Message
 
-Verify Error Messages On Empty Password Field
+Empty Password Field
     [Documentation]  Check error messages on Empty Password Field
-    [Tags]  Empty Password
+    [Tags]  EmptyPassword
     Viasat.Go To Viasat
     Viasat.Login With Empty Password Field
     Viasat.Verify Password Requirement Message
 
-Verify Error Message With Invalid email
-    [Documentation]  Check error messages on empty fields
+Invalid Email Format
+    [Documentation]  Enters invalid email format
     [Tags]  InvalidEmail
     Viasat.Go To Viasat
     Viasat.Login With Invalid Email Credential
     Viasat.Verify Password Requirement Message
+
+Invalid Login Attempt
+    [Documentation]  Enter none existing credentials
+    [Tags]   InvalidCredentials
+    Viasat.Go To Viasat
+    Viasat.Login With Invalid Credentials
+    Viasat.Verify Invalid Credential Message
 
 
 

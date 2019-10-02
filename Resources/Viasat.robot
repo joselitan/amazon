@@ -7,6 +7,7 @@ Resource  ../Resources/PO/MyPage.robot
 Resource  ../Resources/PO/SubscriptionPage.robot
 Resource  ../Resources/PO/AddToCartPage.robot
 Resource  ../Resources/PO/ActivatePage.robot
+Resource  ../Resources/PO/ResetPage.robot
 Resource  ../Resources/Common.robot
 
 *** Keywords ***
@@ -43,11 +44,24 @@ Login With Invalid Email Credential
     LoginPopup.Click email losenord
     CredentialsPopup.Enter Invalid Email address
 
+Login With Invalid Credentials
+    [Documentation]  Enter invalid Crentials and verify error message
+    LoginPopup.Login link
+    LoginPopup.Click email losenord
+    CredentialsPopup.Enter invalid credentials
+
+
 Go To Activate
     [Documentation]  Open login popup to login
     LoginPopup.Login link
     LoginPopup.Click email losenord
     CredentialsPopup.Click Activate My Pages Link
+
+Go To Forget Password
+    [Documentation]  Goes to Forget password page
+    LoginPopup.Login link
+    LoginPopup.Click email losenord
+    CredentialsPopup.Click Forget Password Link
 
 Enter Activate Account Input
     ActivatePage.Enter Subscription Number
@@ -73,6 +87,13 @@ Add Product to Cart
     AddToCartPage. Click Cart Icon
     AddToCartPage.Verify Page Load
 
+Remove Product From Checkout
+    AddToCartPage.Click Change Button
+    AddToCartPage.Click Bin Icon
+    AddToCartPage.Click Save Button
+    AddToCartPage.Verify Addon Not Exists
+
+
 Log out from my pages
     [Documentation]  Logs out
     LandingPage.Log Out
@@ -90,11 +111,21 @@ Verify Email Requirement Message
 Verify Password Requirement Message
     CredentialsPopup.Verify Password Message
 
+Verify Invalid Credential Message
+    CredentialsPopup.Verify Invalid Credential Message
+
 Verify Email Is Invalid
     CredentialsPopup.Verify Email Must Be Valid
 
 Verify Button Is Disabled
-    ActivatePage.Verify Confirm Button Is Disabled
+    Common.Verify Confirm Button Is Disabled
 
 Verify Button Is Enabled
-    ActivatePage.Verify Confirm Button Is Enabled
+    Common.Verify Confirm Button Is Enabled
+
+Verify Login Successful
+    MyPage.Verify Page Loaded
+
+
+
+
