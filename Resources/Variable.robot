@@ -9,3 +9,8 @@ ${PASSWORD}             Viasat2019!
 #&{MAPPING}             one=${1}     two=${2}      three=${3}
 #@{ANIMALS}             cat          dog
 #&{FINNISH}             cat=kissa    dog=koira
+
+@{PRODUCT_SELECTABLES} =  Filmfavoriter
+...  C More Golf
+...  Tillvalspaket Danmark
+...  Tillvalspaket Norge

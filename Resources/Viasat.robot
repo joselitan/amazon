@@ -74,24 +74,25 @@ Go to My Pages
     [Documentation]  Verifies that My Pages is reached
     MyPage.Verify Page Loaded
 
-Select package or addon on subscription page
+Select addon on subscription page
     [Documentation]  Goes to my subscription and selects package for upgrade
     SubscriptionPage.My Subscription
     SubscriptionPage.Verify Page Loaded
     SubscriptionPage.Audit and Change
-    SubscriptionPage.Select Package
+    SubscriptionPage.Select Package  2
     SubscriptionPage.Save Changes
 
-Add Product to Cart
+View Cart
     [Documentation]  Goes to Check out
+    AddToCartPage.Verify Items Added To Cart
     AddToCartPage. Click Cart Icon
-    AddToCartPage.Verify Page Load
+    #AddToCartPage.Verify Page Load
 
 Remove Product From Checkout
     AddToCartPage.Click Change Button
     AddToCartPage.Click Bin Icon
     AddToCartPage.Click Save Button
-    AddToCartPage.Verify Addon Not Exists
+
 
 
 Log out from my pages
@@ -105,6 +106,7 @@ Go To Activate Account
     LoginPopup.Click email losenord
     CredentialsPopup.Click Activate My Pages Link
 
+
 Verify Email Requirement Message
     CredentialsPopup.Verify Email Message
 
@@ -117,14 +119,20 @@ Verify Invalid Credential Message
 Verify Email Is Invalid
     CredentialsPopup.Verify Email Must Be Valid
 
+Verify Reset Page Loaded
+    ResetPage.Verify Page Loaded
+
 Verify Button Is Disabled
-    Common.Verify Confirm Button Is Disabled
+    ResetPage.Verify Confirm Is Disabled
 
 Verify Button Is Enabled
-    Common.Verify Confirm Button Is Enabled
+    ResetPage.Verify Confirm Is Enabled
 
 Verify Login Successful
     MyPage.Verify Page Loaded
+
+
+
 
 
 

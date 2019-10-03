@@ -20,3 +20,6 @@ User must sign in to upgrade
     Viasat.Go To Viasat
     Viasat.Go To Forget Password
     Viasat.Verify Button Is Disabled
+    Viasat.Verify Reset Page Loaded
+    Viasat.Login With Invalid Email Credential
+    Viasat.Verify Button Is Enabled

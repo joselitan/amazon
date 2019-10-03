@@ -23,3 +23,7 @@ Click Save Button
 Verify Addon Not Exists
     [Documentation]
     Wait Until Page Does Not Contain Element  Tillvalspaket Danmark
+
+Verify Items Added To Cart
+    [Documentation]  checking that items has been added to cart icon
+     Wait Until Element Is Visible  xpath:.//app-cart//div[@class='icon-cart icon']/following-sibling::div

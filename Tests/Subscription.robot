@@ -15,9 +15,9 @@ ${START_URL} =  https://www.viasat.se
 *** Test Cases ***
 
 Add Product To Check Out
-    Viasat.Select package or addon on subscription page
-    Viasat.Add Product to Cart
+    Viasat.Select addon on subscription page
+    Viasat.View Cart
 
-Remove Product From Check Out
-    Viasat.Remove Product From Checkout
-    #Viasat.Verify Addon Not Exists
+#Remove Product From Check Out
+#    Viasat.Remove Product From Checkout
+#    Viasat.Verify Addon Not Exists

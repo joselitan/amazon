@@ -37,3 +37,9 @@ Invalid Email
     Given Go To Viasat
     When Login With Invalid Email Credential
     Then Verify Email Must Be Valid
+
+Invalid credentials
+    [Tags]  InvalidCredentials
+    Given Go To Viasat
+    When Login With Invalid Credentials
+    Then Verify Invalid Credential Message
