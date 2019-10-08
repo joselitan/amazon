@@ -93,8 +93,6 @@ Remove Product From Checkout
     AddToCartPage.Click Bin Icon
     AddToCartPage.Click Save Button
 
-
-
 Log out from my pages
     [Documentation]  Logs out
     LandingPage.Log Out
