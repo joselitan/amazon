@@ -1,8 +1,8 @@
 *** Settings ***
 #Library  SeleniumLibrary
 *** Variables ***
-${USERNAME}             johan.cedervall@nentgroup.com
-${PASSWORD}             Viasat2019!
+${USERNAME}             jlmm83@hotmail.com
+${PASSWORD}             test1234
 #${INTEGER}             ${42}
 #@{STRINGS}             one          two           kolme         four
 #@{NUMBERS}             ${1}         ${INTEGER}    ${3.14}

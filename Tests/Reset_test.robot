@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  This is some basic info about the whole suite
-Resource  ../Resources/Viasat.robot
+Resource  ../Resources/ViasatApp.robot
 Resource  ../Resources/Common.robot
 Suite Setup  Insert Testing Data
 Test Setup  Begin Web Test
@@ -17,9 +17,9 @@ ${START_URL} =  https://test.viasat.se
 User must sign in to upgrade
     [Documentation]  This is some basic info about the test
     [Tags]  ForgetPassword
-    Viasat.Go To Viasat
-    Viasat.Go To Forget Password
-    Viasat.Verify Button Is Disabled
-    Viasat.Verify Reset Page Loaded
-    Viasat.Login With Invalid Email Credential
-    Viasat.Verify Button Is Enabled
+    ViasatApp.Go To Viasat
+    ViasatApp.Go To Forget Password
+    ViasatApp.Verify Button Is Disabled
+    ViasatApp.Verify Reset Page Loaded
+    ViasatApp.Login With Invalid Email Credential
+    ViasatApp.Verify Button Is Enabled

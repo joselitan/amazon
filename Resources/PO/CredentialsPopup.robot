@@ -38,6 +38,7 @@ Click Activate My Pages Link
 Click Forget Password Link
     Click Element  ${FORGOT_PASSWORD_LINK}
 
+
 #Verify
 
 Verify Email Message

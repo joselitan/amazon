@@ -12,6 +12,8 @@ Resource  ../Resources/Common.robot
 
 *** Keywords ***
 
+
+
 Go To Viasat
     [Documentation]  Goes to Viasat Page xxx.viasat.se
 

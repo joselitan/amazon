@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource  Viasat.robot
+Resource  ViasatApp.robot
 
 *** Keywords ***
 Begin Web Test
@@ -22,13 +22,13 @@ Close cookie
 Logged In User
     [Documentation]  required logged in user to continue testing
     Begin Web Test
-    Viasat.Go To Viasat
-    Viasat.Login with account
-    Viasat.Verify Login Successful
+    ViasatApp.Go To Viasat
+    ViasatApp.Login with account
+    ViasatApp.Verify Login Successful
 
 Log Out And Close Browser
     [Documentation]  Requires to log out from my pages and close browser
-    Viasat.Log out from my pages
+    ViasatApp.Log out from my pages
     End Web Close
 
 
