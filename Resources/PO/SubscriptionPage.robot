@@ -15,15 +15,17 @@ Audit and Change
 
 Select Package
     [Arguments]  ${numb_of_addon}
-    @{List_Of_Selected_Addons} =  Create List
+    ${List_Of_Selected_Addons} =  Create List
     @{selected_addons} =  Evaluate  random.sample(${PRODUCT_SELECTABLES}, ${numb_of_addon})    random
 
-    : FOR  ${i}  IN   @{selected_addons}
-       Log  ${i}
-       Append To List  @{List_Of_Selected_Addons}  ${i}
-       Log  ${List_Of_Selected_Addons}
-       Click Button  xpath=.//app-catalog-item/div[@class='box subscription-info-box']//div[@class='section-2']//div[contains(text(),'${i}')]/parent::div/parent::div/following-sibling::div//following-sibling::button
+    :FOR  ${i}  IN   @{selected_addons}
+        Log  ${i}
+        Append To List  ${List_Of_Selected_Addons}  ${i}
+
+        Click Button  xpath=.//app-catalog-item/div[@class='box subscription-info-box']//div[@class='section-2']//div[contains(text(),'${i}')]/parent::div/parent::div/following-sibling::div//following-sibling::button
     END
+    # Log  ${List_Of_Selected_Addons}
+    [Return]  ${List_Of_Selected_Addons}
 
 Save Changes
     Click Button  xpath=.//div[@class='product-list ng-star-inserted']//div//button[contains(text(),'Spara ändringar')]

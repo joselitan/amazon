@@ -1,5 +1,6 @@
 *** Settings ***
-Library  SeleniumLibrary
+Library     SeleniumLibrary
+Resource    SubscriptionPage.robot
 
 *** Keywords ***
 Click Cart Icon
@@ -27,3 +28,4 @@ Verify Addon Not Exists
 Verify Items Added To Cart
     [Documentation]  checking that items has been added to cart icon
      Wait Until Element Is Visible  xpath:.//app-cart//div[@class='icon-cart icon']/following-sibling::div
+     Select Package
